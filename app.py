@@ -6,8 +6,10 @@ CORS(app)
 
 # Sample data: list of FAQs
 faqs = [
-    {"id": 1, "question": "What is an Apple?", "answer": "A red fruit."},
-    {"id": 2, "question": "What is a Banana?", "answer": "A yellow fruit."},
+    {"id": 1, "question": "What is the color of an apple?", "answer": "Red."},
+    {"id": 2, "question": "What makes tangerines sweet?", "answer": "High natural sugar content."},
+    {"id": 3, "question": "How do berries stay so colorful?", "answer": "They contain natural pigments called anthocyanins."},
+    {"id": 2, "question": "Why do avocados turn brown?", "answer": "Oxidation when exposed to air."},
 ]
 
 # Helper function to find the FAQ by ID
@@ -69,8 +71,10 @@ CORS(app)
 
 # Sample data: list of FAQs
 faqs = [
-    {"id": 1, "question": "What is an Apple?", "answer": "A red fruit."},
-    {"id": 2, "question": "What is a Banana?", "answer": "A yellow fruit."},
+    {"id": 1, "question": "What is the color of an apple?", "answer": "Red."},
+    {"id": 2, "question": "What makes tangerines sweet?", "answer": "High natural sugar content."},
+    {"id": 3, "question": "How do berries stay so colorful?", "answer": "They contain natural pigments called anthocyanins."},
+    {"id": 2, "question": "Why do avocados turn brown?", "answer": "Oxidation when exposed to air."},
 ]
 
 # Helper function to find the FAQ by ID
