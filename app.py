@@ -35,7 +35,7 @@ def add_faq():
     new_faq = request.json
     if "question" not in new_faq or "answer" not in new_faq:
         return jsonify({"error": "Invalid input"}), 400
-    new_faq['id'] = max(faq['id'] for faq in faqs) + 1  # Automatically incrementing ID
+    new_faq['id'] = max(faq['id'] for faq in faqs) + 1 if faqs else 1  # Handle empty faqs list
     faqs.append(new_faq)
     return jsonify(new_faq), 201
 
@@ -47,6 +47,9 @@ def update_faq(faq_id):
         return jsonify({"error": "FAQ not found"}), 404
     
     updated_data = request.json
+    if "question" not in updated_data and "answer" not in updated_data:
+        return jsonify({"error": "Invalid input"}), 400
+
     faq['question'] = updated_data.get('question', faq['question'])
     faq['answer'] = updated_data.get('answer', faq['answer'])
     
